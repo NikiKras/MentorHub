@@ -8,39 +8,25 @@ MentorHub is a service that helps mentors and cops find each other. Meetings tak
 In this pet project, we aim to provide insights and answers to various queries frequently asked by product managers. The project involves analyzing data related to mentors and mentees interactions on our platform using SQL queries.
 
 ### Structure of MentorHub database
-Database includes this tables:
-
-**1. domain — mentoring directory:**
-
-   id || Unique direction identifier
-
-   name || Direction name
-   
-**2. region — directory of user regions:**
-
-   id || Region unique identifier
-   name || Region name
-   
-**3. users — user table:**
-
-   user_id || Unique user ID
-   reg_date || User registration date
-   role || User role: mentor or mentee
-   region_id || User region ID
-   
-**4. sessions — session table:**
-
-   session_id || Unique session ID
-
-   session_date_time || Date and time of the session
-
-   mentor_id || Mentor ID
-
-   mentee_id || Mentee ID
-
-   session_status || Session status: finished or cancelled
-
-   mentor_domain_id || Mentoring direction ID
+Database includes this tables:  
+**1. domain — mentoring directory:**  
+   id || Unique direction identifier  
+   name || Direction name  
+**2. region — directory of user regions:**  
+   id || Region unique identifier  
+   name || Region name  
+**3. users — user table:**  
+   user_id || Unique user ID  
+   reg_date || User registration date  
+   role || User role: mentor or mentee  
+   region_id || User region ID  
+**4. sessions — session table:**  
+   session_id || Unique session ID  
+   session_date_time || Date and time of the session  
+   mentor_id || Mentor ID  
+   mentee_id || Mentee ID  
+   session_status || Session status: finished or cancelled  
+   mentor_domain_id || Mentoring direction ID  
 
 ### Product manager questions
 The following product manager questions are included in this project:
