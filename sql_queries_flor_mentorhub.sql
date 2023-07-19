@@ -78,9 +78,9 @@ from s
 
 select to_char(DATE_TRUNC('month', session_date_time),'YYYY/MM') as month,
        d.name as name,
-       COUNT(*) as total_sessions,
-       COUNT(case when session_status = 'canceled' then 1 end) AS canceled_sessions,
-       ROUND(COUNT(case when session_status = 'canceled' then 1 end) * 100.0 / COUNT(*), 2) AS canceled_session_percentage
+       count(*) as total_sessions,
+       count(case when session_status = 'canceled' then 1 end) as canceled_sessions,
+       round(count(case when session_status = 'canceled' then 1 end) * 100.0 / count(*), 2) as canceled_session_percentage
 from sessions s
 join domain d
 on s.mentor_domain_id = d.id
@@ -105,8 +105,8 @@ limit 1
 with most_dif_day as (
 	select
     	d.name as name,
-    	to_char(s.session_date_time,'Day') AS week_day,
-    	count(*) AS total_sessions
+    	to_char(s.session_date_time,'Day') as week_day,
+    	count(*) as total_sessions
 	from sessions s 
 	join domain d
 	on s.mentor_domain_id = d.id
