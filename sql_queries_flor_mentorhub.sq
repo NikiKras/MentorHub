@@ -17,7 +17,7 @@ on u.user_id = s.mentee_id
 where session_id is null
 group by "role" 
 
-/*Задача 3: Сколько у каждого ментора в среднем успешных сессий в неделю по месяцам? 
+/*3. Сколько у каждого ментора в среднем успешных сессий в неделю по месяцам? 
 Как меняется частота встреч в неделю от месяца к месяцу?
 Определите ТОП-5 менторов с самым большим числом сессий за последний полный месяц.*/
 
@@ -53,7 +53,7 @@ group by mentor_id
 order by session_count desc
 limit 5;
 
-/*Задача: 4. Сколько времени в среднем проходит между менторскими встречами у одного ментора?*/
+/*4. Сколько времени в среднем проходит между менторскими встречами у одного ментора?*/
 
 with s as(
   select *, lag (session_date_time) over (partition by mentor_id order by session_id) as lg
@@ -121,7 +121,7 @@ from most_dif_day m
 join (select name, max(total_sessions) as max_total_sessions from most_dif_day group by name) as m1
 on m.name= m1.name and m.total_sessions = m1.max_total_sessions
 
-/*4*. Спрогнозируйте, сколько новых менторов нужно найти, если в следующем месяце количество активных менти увеличится
+/*Дополнительный вопрос: Спрогнозируйте, сколько новых менторов нужно найти, если в следующем месяце количество активных менти увеличится
 на 500 человек. Учитывайте, что занятость новых менторов будет такой же, как у текущих. Ответ: 356 менторов*/
 
 with s as(select to_char(session_date_time,'YYYY/MM') as month, count(distinct(mentor_id)) as mentor_cnt, count(distinct(mentee_id)) as mentee_cnt
