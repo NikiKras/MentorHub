@@ -92,14 +92,14 @@ order by month
 В результатах выведите тип направления, день недели и количество встреч. */
 
 select
-    to_char(session_date_time,'Day') AS week_day,
-    count(*) AS total_sessions
+    to_char(session_date_time,'Day') as week_day,
+    count(*) as total_sessions
 from sessions s2 
 where  session_date_time >= DATE_TRUNC('month', (select MAX(session_date_time) from sessions s)) - interval '1 month'
   and session_date_time < DATE_TRUNC('month', (select MAX(session_date_time) from sessions s))
   and session_status = 'finished'
 group by week_day
-order by total_sessions DESC
+order by total_sessions desc
 limit 1
 
 with most_dif_day as (
