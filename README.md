@@ -19,17 +19,13 @@ Database includes this tables:
 **2. region — directory of user regions:**
 
    id || Region unique identifier
-
    name || Region name
    
 **3. users — user table:**
 
    user_id || Unique user ID
-
    reg_date || User registration date
-
    role || User role: mentor or mentee
-
    region_id || User region ID
    
 **4. sessions — session table:**
