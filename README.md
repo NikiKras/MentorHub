@@ -43,3 +43,5 @@ How does the percentage of cancelled sessions change monthly?
 6. Determine the day of the week with the most meetings in the last full month.
 Identify the busiest day of the week for each mentoring direction. 
 Display the direction type, day of the week, and number of meetings in the results. 
+**Additional question**: Predict how many new mentors need to find, if next month, the number of active mentee will increase for 500 people.
+Keep in mind that the employment of new mentors will be the same as the current one.
