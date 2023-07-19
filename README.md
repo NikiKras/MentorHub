@@ -10,17 +10,22 @@ In this pet project, we aim to provide insights and answers to various queries f
 ### Structure of MentorHub database
 Database includes this tables:
 1. domain — mentoring directory:
-   id || Unique direction identifier;
+   id || Unique direction identifier
+
    name || Direction name.
-2. region — directory of user regions
+3. region — directory of user regions
    id || Region unique identifier
+
    name || Region name
-3. users — user table.
+5. users — user table.
    user_id || Unique user ID
+
    reg_date || User registration date
+
    role || User role: mentor or mentee
+
    region_id || User region ID
-5. sessions — session table.
+7. sessions — session table.
    session_id || Unique session ID
    session_date_time || Date and time of the session
    mentor_id || Mentor ID
