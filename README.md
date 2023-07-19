@@ -9,15 +9,21 @@ In this pet project, we aim to provide insights and answers to various queries f
 
 ### Structure of MentorHub database
 Database includes this tables:
-1. domain — mentoring directory:
+
+1. domain — mentoring directory
+
    id || Unique direction identifier
 
-   name || Direction name.
-3. region — directory of user regions
+   name || Direction name
+   
+2. region — directory of user regions
+
    id || Region unique identifier
 
    name || Region name
-5. users — user table.
+   
+3. users — user table.
+
    user_id || Unique user ID
 
    reg_date || User registration date
@@ -25,12 +31,19 @@ Database includes this tables:
    role || User role: mentor or mentee
 
    region_id || User region ID
-7. sessions — session table.
+   
+4. sessions — session table.
+
    session_id || Unique session ID
+
    session_date_time || Date and time of the session
+
    mentor_id || Mentor ID
+
    mentee_id || Mentee ID
+
    session_status || Session status: finished or cancelled
+
    mentor_domain_id || Mentoring direction ID
 
 ### Product manager questions
