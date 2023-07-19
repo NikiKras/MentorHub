@@ -33,7 +33,7 @@ The following product manager questions are included in this project:
 1. Quantity of Mentors and Mentees Interacting Monthly
 2. How many mentors and mentees are there on the platform who have not participated in any meetings yet? 
 Take into account users who have never assigned themselves meetings. 
-Why are they not participating in meetings? What hypotheses can be tested?/
+Why are they not participating in meetings?
 3. How many average successful sessions per week does each mentor have for each month? 
 How does the frequency of meetings per week change from month to month?
 Identify the top 5 mentors with the highest number of sessions in the last full month.
